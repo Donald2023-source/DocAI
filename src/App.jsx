@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Overview from "./Pages/Overview";
-import Login from "./Pages/Login";
+import IntelligentSearch from "./Pages/IntelligentSearch";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route
+        <Route
           path="/"
           element={
             // Enter signup component e.g <Signup />
@@ -15,8 +15,15 @@ export default function App() {
               <Overview />
             </DashboardLayout>
           }
-        /> */}
-        <Route path="/" element={<Login />} />
+        />
+        <Route
+  path="/intelligent-search"
+  element={
+    <DashboardLayout>
+      <IntelligentSearch />
+    </DashboardLayout>
+  }
+/>
       </Routes>
     </BrowserRouter>
   );
