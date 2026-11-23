@@ -3,8 +3,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import Overview from "./Pages/Overview";
 import IntelligentSearch from "./Pages/IntelligentSearch";
 import Profile from "./Pages/Profile";
-
-export default function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -36,4 +35,6 @@ export default function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
+
+export default App;
