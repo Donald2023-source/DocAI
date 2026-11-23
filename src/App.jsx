@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Overview from "./Pages/Overview";
 import IntelligentSearch from "./Pages/IntelligentSearch";
+import Profile from "./Pages/Profile";
 
 export default function App() {
   return (
@@ -17,13 +18,21 @@ export default function App() {
           }
         />
         <Route
-  path="/intelligent-search"
-  element={
-    <DashboardLayout>
-      <IntelligentSearch />
-    </DashboardLayout>
-  }
-/>
+          path="/intelligent-search"
+          element={
+            <DashboardLayout>
+              <IntelligentSearch />
+            </DashboardLayout>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <DashboardLayout>
+              <Profile />
+            </DashboardLayout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
