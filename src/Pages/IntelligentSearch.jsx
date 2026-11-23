@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SmartSearch from "../components/SmartSearch";
 export default function IntelligentSearch() { const [searchQuery, setSearchQuery] = useState(""); const [documentType, setDocumentType] = useState("All"); const [dateRange, setDateRange] = useState("All");
 const handleSearch = () => { if (!searchQuery.trim()) return;
 console.log("Searching for:", searchQuery);
@@ -63,5 +64,8 @@ return ( <div className="space-y-6"> {/* Page Heading */} <div> <h1 className="t
       <option>Last 90 days</option>
     </select>
   </div>
+
+
+  <SmartSearch />
 </div>
 ); }
