@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Overview from "./Pages/Overview";
+import Login from "./Pages/Login";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
+        {/* <Route
           path="/"
           element={
             // Enter signup component e.g <Signup />
@@ -14,7 +15,8 @@ export default function App() {
               <Overview />
             </DashboardLayout>
           }
-        />
+        /> */}
+        <Route path="/" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
